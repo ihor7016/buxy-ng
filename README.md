@@ -1,6 +1,6 @@
 # BUXY v2
 
-![](./screenshot.png)
+![](./sample.png)
 
 ### Install dependencies
 ```
