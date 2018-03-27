@@ -1,6 +1,4 @@
+import angular from "angular";
 import "./index.scss";
 
-import { App } from "./components/app/app";
-
-const root = document.body.querySelector("#root");
-new App(root).mount();
+const appRoot = angular.module("appRoot", []);

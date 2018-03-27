@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="appRoot">
 
 <head>
   <meta charset="UTF-8">
@@ -8,8 +8,8 @@
   <title>BUXY 2</title>
 </head>
 
-<body>
-  <div id="root"></div>
+<body ng-init="name = 'BUXY 2'">
+  <h1>Hello from {{name}}</h1>
   <script src="dist/bundle.js"></script>
 </body>
 
