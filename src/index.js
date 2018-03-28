@@ -1,4 +1,6 @@
-import angular from "angular";
 import "./index.scss";
 
-const appRoot = angular.module("appRoot", []);
+import angular from "angular";
+import { appModule } from "./components/app/app";
+
+angular.bootstrap(document.body, [appModule]);
