@@ -1,9 +1,9 @@
 {
   "name": "buxy-ng",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "Simple finance tracking app",
   "scripts": {
-    "start": "webpack-dev-server  --mode=development",
+    "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production",
     "precommit": "lint-staged"
   },
