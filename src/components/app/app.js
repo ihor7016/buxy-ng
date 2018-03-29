@@ -5,10 +5,10 @@ import "angular-animate";
 import "angular-aria";
 import "angular-material";
 
-import { transactionDialogModule } from "../transactions-dialog/transactions-dialog";
+import { transactionDialogModule } from "../transaction-dialog/transaction-dialog";
 
 export const appModule = angular
-  .module("appModule", ["ngMaterial", transactionDialogModule])
+  .module("appModule", ["ngMaterial", "ngAnimate", transactionDialogModule])
   .component("app", {
     template
   }).name;
