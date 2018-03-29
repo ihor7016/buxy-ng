@@ -6,7 +6,11 @@ import { todoListModule } from "../todo-list/todo-list";
 
 export class AppController {
   constructor() {
-    this.tasks = ["task 1", "task 2"];
+    this.tasks = [];
+  }
+
+  handleTaskAdd(task) {
+    this.tasks.push(task);
   }
 }
 

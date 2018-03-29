@@ -1,2 +1,3 @@
-<todo-form></todo-form>
+<todo-form on-task-add="$ctrl.handleTaskAdd(task)" num-tasks="$ctrl.tasks.length">
+</todo-form>
 <todo-list todo-items="$ctrl.tasks"></todo-list>

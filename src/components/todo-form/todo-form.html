@@ -1,4 +1,4 @@
 <div>
-  <input type="text">
-  <button>Add #1</button>
+  <input ng-model="$ctrl.value" type="text">
+  <button ng-click="$ctrl.handleClick()">Add #{{$ctrl.numTasks + 1}}</button>
 </div>
