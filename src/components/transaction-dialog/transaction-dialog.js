@@ -1,6 +1,5 @@
 import angular from "angular";
-import template from "./transaction-dialog-btn.html";
-import templateDialog from "./transaction-dialog.html";
+import template from "./transaction-dialog.html";
 
 import "angular-animate";
 import "angular-aria";
@@ -10,11 +9,12 @@ export class TransactionDialogController {
   constructor($mdDialog) {
     this.$mdDialog = $mdDialog;
   }
+
   showDialog(ev) {
     this.$mdDialog
       .show({
         controller: this.DialogController.bind(this),
-        template: templateDialog,
+        template,
         parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose: true
@@ -36,6 +36,5 @@ export class TransactionDialogController {
 export const transactionDialogModule = angular
   .module("transactionDialogModule", ["ngMaterial"])
   .component("transactionDialog", {
-    controller: TransactionDialogController,
-    template
+    controller: TransactionDialogController
   }).name;

@@ -10,5 +10,6 @@ import { transactionDialogModule } from "../transaction-dialog/transaction-dialo
 export const appModule = angular
   .module("appModule", ["ngMaterial", "ngAnimate", transactionDialogModule])
   .component("app", {
-    template
+    template,
+    bindings: {}
   }).name;
