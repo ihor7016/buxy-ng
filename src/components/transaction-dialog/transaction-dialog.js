@@ -1,9 +1,4 @@
-import angular from "angular";
 import template from "./transaction-dialog.html";
-
-import "angular-animate";
-import "angular-aria";
-import "angular-material";
 
 export class TransactionDialogController {
   constructor($mdDialog) {
@@ -34,7 +29,12 @@ export class TransactionDialogController {
 }
 
 export const transactionDialogModule = angular
-  .module("transactionDialogModule", ["ngMaterial"])
+  .module("transactionDialogModule", [])
   .component("transactionDialog", {
-    controller: TransactionDialogController
+    controller: TransactionDialogController,
+    template: `<md-button class="md-fab md-primary" aria-label="FAB" ng-click="$ctrl.showDialog()">
+      <md-icon>
+        <i class="material-icons">add</i>
+      </md-icon>
+    </md-button>`
   }).name;
