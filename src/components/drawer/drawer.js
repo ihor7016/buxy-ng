@@ -1,5 +1,6 @@
 import angular from "angular";
 import template from "./drawer.html";
+
 export class DrawerController {
   constructor($mdSidenav) {
     this.$mdSidenav = $mdSidenav;
@@ -16,7 +17,6 @@ export class DrawerController {
     this.buildToggler("right");
   }
 }
-
 export const drawerModule = angular
   .module("drawer", ["ngMaterial"])
   .component("drawer", {

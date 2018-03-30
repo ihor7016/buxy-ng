@@ -4,6 +4,7 @@ import { drawerModule } from "../drawer/drawer";
 import "angular-animate";
 import "angular-aria";
 import "angular-material";
+import { toolbarModule } from "../toolbar/toolbar";
 
 export class AppController {
   constructor() {
@@ -16,7 +17,7 @@ export class AppController {
 }
 
 export const appModule = angular
-  .module("appModule", [drawerModule])
+  .module("appModule", [drawerModule, toolbarModule])
   .component("app", {
     controller: AppController,
     template
