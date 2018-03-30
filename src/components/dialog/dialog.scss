@@ -2,6 +2,10 @@
   min-width: 50%;
 
   &__type {
-    width: 60px;
+    height: 54px;
+    padding: 8px 0;
+  }
+  &__type-text {
+    min-width: 150px;
   }
 }

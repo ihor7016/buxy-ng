@@ -1,50 +1,50 @@
 <md-dialog class="dialog">
   <form ng-cloak>
-    <md-dialog-content>
-      <div class="md-dialog-content">
-        <h2>Add transaction</h2>
-        <div layout='row' layout-align="start center">
-          <md-input-container class="date-picker" flex="50">
-            <md-datepicker ng-model="$ctrl.date" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
-          </md-input-container>
-          <md-radio-group ng-model="$ctrl.type" layout='row' flex="50">
-            <span class="dialog__type">Type: </span>
+    <md-dialog-content class="md-dialog-content">
+      <h2>Add transaction</h2>
+      <div layout="row">
+        <md-input-container flex="45" class="dialog__type">
+          <md-radio-group ng-model="$ctrl.type" layout-gt-md="row" layout="column">
+            <span class="dialog__type-text">Type of transaction: </span>
             <md-radio-button value="-" class="md-primary">Expense</md-radio-button>
             <md-radio-button value="+" class="md-primary">Income</md-radio-button>
           </md-radio-group>
-        </div>
-        <div layout='row'>
-          <md-input-container flex="50">
-            <label>Description</label>
-            <input ng-model="$ctrl.description" type="text">
-          </md-input-container>
-          <md-input-container flex="50">
-            <label>Amount</label>
-            <input ng-model="$ctrl.amount" type="text">
-          </md-input-container>
-        </div>
-        <div layout='row'>
-          <md-input-container flex="50">
-            <label>Account</label>
-            <md-select ng-model="$ctrl.account">
-              <md-option ng-repeat="account in $ctrl.accounts" value="{{account}}">
-                {{account}}
-              </md-option>
-            </md-select>
-          </md-input-container>
-          <md-input-container flex="50">
-            <label>Tag</label>
-            <md-select ng-model="$ctrl.tag">
-              <md-option ng-repeat="tag in $ctrl.tags" value="{{tag}}">
-                {{tag}}
-              </md-option>
-            </md-select>
-          </md-input-container>
-        </div>
+        </md-input-container>
+        <span flex="10"></span>
+        <md-input-container class="date-picker" flex="45">
+          <md-datepicker ng-model="$ctrl.date" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+        </md-input-container>
+      </div>
+      <div layout='row' layout-align="space-between center">
+        <md-input-container flex="45">
+          <label>Description</label>
+          <input ng-model="$ctrl.description" type="text">
+        </md-input-container>
+        <md-input-container flex="45">
+          <label>Amount</label>
+          <input ng-model="$ctrl.amount" type="text">
+        </md-input-container>
+      </div>
+      <div layout='row' layout-align="space-between center">
+        <md-input-container flex="45">
+          <label>Account</label>
+          <md-select ng-model="$ctrl.account">
+            <md-option ng-repeat="account in $ctrl.accounts" value="{{account}}">
+              {{account}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container flex="45">
+          <label>Tag</label>
+          <md-select ng-model="$ctrl.tag">
+            <md-option ng-repeat="tag in $ctrl.tags" value="{{tag}}">
+              {{tag}}
+            </md-option>
+          </md-select>
+        </md-input-container>
       </div>
     </md-dialog-content>
-    <md-dialog-actions layout="row">
-      <span flex></span>
+    <md-dialog-actions layout="row" layout-align="end">
       <md-button ng-click="$ctrl.abort('cancel')">
         Cancel
       </md-button>
