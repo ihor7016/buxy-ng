@@ -1,8 +1,9 @@
+import angular from "angular";
 import template from "./app.html";
 
-import "angular-animate";
-import "angular-aria";
-import "angular-material";
+// import ngAnimate from "angular-animate";
+import ngMaterial from "angular-material";
+// import ngAria from "angular-aria";
 
 import { transactionDialogModule } from "../transaction-dialog/transaction-dialog";
 
@@ -16,7 +17,7 @@ export class AppController {
 }
 
 export const appModule = angular
-  .module("appModule", ["ngMaterial", transactionDialogModule])
+  .module("appModule", [ngMaterial, transactionDialogModule])
   .component("app", {
     template,
     controller: AppController,
