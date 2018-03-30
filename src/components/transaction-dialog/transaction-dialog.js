@@ -14,7 +14,15 @@ export class TransactionDialogController {
     // this.api.showDialog = this.showDialog;
   }
 
+  // $onInit() {
+  //   this.api = {};
+  //   this.api.showDialog = this.showDialog;
+  // }
+
   showDialog(ev) {
+    // bindings: {
+    //   api: "="
+    // }
     this.$mdDialog
       .show({
         template,
@@ -65,6 +73,6 @@ export const transactionDialogModule = angular
       </md-icon>
     </md-button>`
     // bindings: {
-    //   btnClick: "&"
-    //}
+    //   api: "="
+    // }
   }).name;
