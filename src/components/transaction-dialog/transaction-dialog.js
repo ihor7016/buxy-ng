@@ -51,7 +51,6 @@ export class TransactionDialogController {
       }
 
       abort() {
-        console.log("cancel");
         this.$mdDialog.cancel();
       }
     };
