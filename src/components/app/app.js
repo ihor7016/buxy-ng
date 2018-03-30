@@ -14,7 +14,7 @@ export class AppController {
   handleTaskAdd(task) {
     this.tasks.push(task);
   }
-  openDrawer() {}
+  openDrawer(tr) {}
 }
 
 export const appModule = angular
