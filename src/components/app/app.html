@@ -1,6 +1,8 @@
-<transaction-dialog show="$ctrl.addDialogShow"></transaction-dialog>
-<md-button class="md-fab md-primary" aria-label="FAB" ng-click="$ctrl.onAddTransactionClick($event)">
-  <md-icon>
-    <i class="material-icons">add</i>
-  </md-icon>
-</md-button>
+<div class="app">
+  <transaction-dialog show="$ctrl.transactionDialogShow"></transaction-dialog>
+  <md-button class="app__add-transaction-dialog-activation md-fab md-primary" aria-label="FAB" ng-click="$ctrl.onAddTransactionClick($event)">
+    <md-icon>
+      <i class="material-icons">add</i>
+    </md-icon>
+  </md-button>
+</div>

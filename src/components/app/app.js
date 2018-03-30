@@ -1,19 +1,17 @@
 import angular from "angular";
 import template from "./app.html";
 
-// import ngAnimate from "angular-animate";
 import ngMaterial from "angular-material";
-// import ngAria from "angular-aria";
 
 import { transactionDialogModule } from "../transaction-dialog/transaction-dialog";
 
 export class AppController {
   constructor() {
-    this.addDialogShow = { show: false };
+    this.transactionDialogShow = { show: false };
   }
 
   onAddTransactionClick(event) {
-    this.addDialogShow = { show: true, event: event };
+    this.transactionDialogShow = { show: true, event: event };
   }
 }
 

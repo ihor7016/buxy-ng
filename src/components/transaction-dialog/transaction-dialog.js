@@ -3,7 +3,6 @@ import template from "./transaction-dialog.html";
 
 import ngAnimate from "angular-animate";
 import ngMaterial from "angular-material";
-// import ngAria from "angular-aria";
 
 export class TransactionDialogController {
   constructor($mdDialog) {
@@ -31,14 +30,23 @@ export class TransactionDialogController {
   dialogController() {
     const self = this;
     return class {
-      constructor($mdDialog) {
+      constructor($mdDialog, $filter) {
         this.$mdDialog = $mdDialog;
+        this.$filter = $filter;
+        this.date = new Date();
         this.tags = self.tags;
         this.accounts = self.accounts;
       }
 
       submit() {
-        console.log("ok");
+        console.log({
+          type: this.type,
+          desc: this.description,
+          amount: this.amount,
+          date: this.$filter("date")(this.date, "yyyy-MM-dd"),
+          account: this.account,
+          tag: this.tag
+        });
         this.$mdDialog.hide();
       }
 
