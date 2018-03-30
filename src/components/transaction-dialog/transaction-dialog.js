@@ -12,7 +12,7 @@ export class TransactionDialogController {
   }
 
   $onChanges(changes) {
-    if (changes.show.currentValue.show === true) {
+    if (changes.show.currentValue) {
       this.showDialog(changes.show.currentValue.event);
     }
   }
