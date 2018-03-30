@@ -5,32 +5,32 @@
         <h2>Add transaction</h2>
         <div layout='row'>
           <span class="dialog__type">Type: </span>
-          <md-radio-group ng-model="type" layout='row'>
-            <md-radio-button value="Expense" class="md-primary">Expense</md-radio-button>
-            <md-radio-button value="Income" class="md-primary">Income</md-radio-button>
+          <md-radio-group ng-model="$ctrl.type" layout='row'>
+            <md-radio-button value="-" class="md-primary">Expense</md-radio-button>
+            <md-radio-button value="+" class="md-primary">Income</md-radio-button>
           </md-radio-group>
         </div>
         <div layout='row'>
           <md-input-container flex>
             <label>Description</label>
-            <input ng-model="description" type="text">
+            <input ng-model="$ctrl.description" type="text">
           </md-input-container>
         </div>
         <div layout='row'>
           <md-input-container flex="50">
             <label>Amount</label>
-            <input ng-model="amount" type="text">
+            <input ng-model="$ctrl.amount" type="text">
           </md-input-container>
           <md-input-container flex="50">
             <label>Date</label>
-            <input ng-model="date" type="date">
+            <input ng-model="$ctrl.date" type="date">
           </md-input-container>
         </div>
         <div layout='row'>
           <md-input-container flex="50">
             <label>Account</label>
             <md-select ng-model="account">
-              <md-option ng-repeat="account in $ctrl.accounts" ng-value="account">
+              <md-option ng-repeat="account in $ctrl.accounts" ng-value="{{account}}">
                 {{account}}
               </md-option>
             </md-select>
@@ -38,7 +38,7 @@
           <md-input-container flex="50">
             <label>Tag</label>
             <md-select ng-model="tag">
-              <md-option ng-repeat="tag in $ctrl.tags" ng-value="tag">
+              <md-option ng-repeat="tag in $ctrl.tags" ng-value="{{tag}}">
                 {{tag}}
               </md-option>
             </md-select>
@@ -49,10 +49,10 @@
 
     <md-dialog-actions layout="row">
       <span flex></span>
-      <md-button ng-click="$ctrl.abort()">
+      <md-button ng-click="$ctrl.abort('cancel')">
         Cancel
       </md-button>
-      <md-button ng-click="$ctrl.hide()">
+      <md-button ng-click="$ctrl.hide('ok')">
         Ok
       </md-button>
     </md-dialog-actions>
