@@ -8,9 +8,12 @@ import ngMaterial from "angular-material";
 import { transactionDialogModule } from "../transaction-dialog/transaction-dialog";
 
 export class AppController {
-  constructor() {}
-  onAddButtonClick() {
-    this.myApi.showDialog();
+  constructor() {
+    this.addDialogShow = { show: false };
+  }
+
+  onAddTransactionClick(event) {
+    this.addDialogShow = { show: true, event: event };
   }
 }
 

@@ -29,7 +29,7 @@
         <div layout='row'>
           <md-input-container flex="50">
             <label>Account</label>
-            <md-select ng-model="account">
+            <md-select ng-model="$ctrl.account">
               <md-option ng-repeat="account in $ctrl.accounts" ng-value="{{account}}">
                 {{account}}
               </md-option>
@@ -37,7 +37,7 @@
           </md-input-container>
           <md-input-container flex="50">
             <label>Tag</label>
-            <md-select ng-model="tag">
+            <md-select ng-model="$ctrl.tag">
               <md-option ng-repeat="tag in $ctrl.tags" ng-value="{{tag}}">
                 {{tag}}
               </md-option>
@@ -52,7 +52,7 @@
       <md-button ng-click="$ctrl.abort('cancel')">
         Cancel
       </md-button>
-      <md-button ng-click="$ctrl.hide('ok')">
+      <md-button ng-click="$ctrl.submit('ok')">
         Ok
       </md-button>
     </md-dialog-actions>

@@ -10,47 +10,34 @@ export class TransactionDialogController {
     this.$mdDialog = $mdDialog;
     this.tags = ["transport", "food", "salary"];
     this.accounts = ["Privat", "BoaBank", "Cash"];
-    // this.api = {};
-    // this.api.showDialog = this.showDialog;
   }
 
-  // $onInit() {
-  //   this.api = {};
-  //   this.api.showDialog = this.showDialog;
-  // }
+  $onChanges(changes) {
+    if (changes.show.currentValue.show === true) {
+      this.showDialog(changes.show.currentValue.event);
+    }
+  }
 
   showDialog(ev) {
-    // bindings: {
-    //   api: "="
-    // }
-    this.$mdDialog
-      .show({
-        template,
-        controllerAs: "$ctrl",
-        controller: this.dialogController(),
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose: true
-      })
-      .then();
-    // answer => {
-    //   this.status = 'You said the information was "' + answer + '".';
-    // },
-    // function() {
-    //   this.status = "You cancelled the dialog.";
-    // }
+    this.$mdDialog.show({
+      template,
+      controllerAs: "$ctrl",
+      controller: this.dialogController(),
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose: true
+    });
   }
   dialogController() {
     const self = this;
     return class {
       constructor($mdDialog) {
-        console.log(this);
         this.$mdDialog = $mdDialog;
         this.tags = self.tags;
         this.accounts = self.accounts;
       }
 
-      hide() {
+      submit() {
         console.log("ok");
         this.$mdDialog.hide();
       }
@@ -67,12 +54,7 @@ export const transactionDialogModule = angular
   .module("transactionDialogModule", [ngMaterial, ngAnimate])
   .component("transactionDialog", {
     controller: TransactionDialogController,
-    template: `<md-button class="md-fab md-primary" aria-label="FAB" ng-click="$ctrl.showDialog($event)">
-      <md-icon>
-        <i class="material-icons">add</i>
-      </md-icon>
-    </md-button>`
-    // bindings: {
-    //   api: "="
-    // }
+    bindings: {
+      show: "<"
+    }
   }).name;
