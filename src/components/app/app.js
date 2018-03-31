@@ -9,12 +9,16 @@ import { toolbarModule } from "../toolbar/toolbar";
 export class AppController {
   constructor() {
     this.tasks = [];
+    this.drawerOpened = { value: false };
   }
 
   handleTaskAdd(task) {
     this.tasks.push(task);
   }
-  openDrawer(tr) {}
+
+  openDrawer() {
+    this.drawerOpened.value = !this.drawerOpened.value;
+  }
 }
 
 export const appModule = angular

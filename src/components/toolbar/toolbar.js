@@ -2,7 +2,7 @@ import angular from "angular";
 import template from "./toolbar.html";
 class ToolbarController {
   handleMenuClick() {
-    this.onMenuClick({ tr: console.log("jhh") });
+    this.onMenuClick();
   }
 }
 export const toolbarModule = angular

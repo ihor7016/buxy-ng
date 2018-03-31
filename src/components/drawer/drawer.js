@@ -5,21 +5,21 @@ export class DrawerController {
   constructor($mdSidenav) {
     this.$mdSidenav = $mdSidenav;
   }
-  buildToggler(componentId) {
-    this.$mdSidenav(componentId).toggle();
+
+  $onChanges(changes) {
+    this.toggleLeft();
   }
 
   toggleLeft() {
-    this.buildToggler("left");
-  }
-
-  toggleRight() {
-    this.buildToggler("right");
+    this.$mdSidenav("left").toggle();
   }
 }
 export const drawerModule = angular
   .module("drawer", ["ngMaterial"])
   .component("drawer", {
     controller: DrawerController,
+    bindings: {
+      drawerOpened: "<"
+    },
     template
   }).name;
