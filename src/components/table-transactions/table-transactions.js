@@ -1,7 +1,7 @@
 import angular from "angular";
 import template from "./table-transactions.html";
 
-export class GridCtrl {
+export class GridController {
   constructor() {
     this.transactions = [
       {
@@ -31,8 +31,8 @@ export class GridCtrl {
 }
 
 export const tableTransactionModule = angular
-  .module("tableTransactionModule", [])
+  .module("tableTransaction", [])
   .component("tableTransaction", {
-    controller: GridCtrl,
+    controller: GridController,
     template
   }).name;
