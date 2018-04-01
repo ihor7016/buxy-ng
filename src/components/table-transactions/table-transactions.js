@@ -1,4 +1,6 @@
 import angular from "angular";
+import uiGrid from "angular-ui-grid";
+
 import template from "./table-transactions.html";
 
 export class GridController {
@@ -8,31 +10,30 @@ export class GridController {
         date: "01.03.2018",
         amount: "-300 UAH",
         description: "soccer playing",
-        tags: hobby,
-        account: PrivatBank,
-        debitcard
+        tags: "hobby",
+        account: "PrivatBank debitcard"
       },
       {
         date: "17.03.2018",
         amount: "+1500 UAH",
         description: "%% deposit",
         tags: "Bank's services",
-        account: PravexBank
+        account: "PravexBank"
       },
       {
         date: "05.04.2018",
         amount: "-500 UAH",
         description: "fishing",
-        tags: hobby,
-        account: cash
+        tags: "hobby",
+        account: "cash"
       }
     ];
   }
 }
 
-export const tableTransactionModule = angular
-  .module("tableTransaction", [])
-  .component("tableTransaction", {
+export const tableTransactionsModule = angular
+  .module("tableTransactions", ["ui.grid"])
+  .component("tableTransactions", {
     controller: GridController,
     template
   }).name;
