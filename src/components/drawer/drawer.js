@@ -1,5 +1,6 @@
 import angular from "angular";
 import template from "./drawer.html";
+import { accountsModule } from "../accounts/accounts";
 
 export class DrawerController {
   constructor($mdSidenav) {
@@ -17,7 +18,7 @@ export class DrawerController {
   }
 }
 export const drawerModule = angular
-  .module("drawer", ["ngMaterial"])
+  .module("drawer", ["ngMaterial", accountsModule])
   .component("drawer", {
     controller: DrawerController,
     bindings: {
