@@ -4,6 +4,8 @@ class ToolbarController {
   handleMenuClick() {
     this.onMenuClick();
   }
+
+  handleAboutClick() {}
 }
 export const toolbarModule = angular
   .module("toolbar", ["ngMaterial"])
