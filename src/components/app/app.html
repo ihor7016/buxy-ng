@@ -1,2 +1,7 @@
-<drawer drawer-opened="$ctrl.drawerOpened.value"></drawer>
-<toolbar on-menu-click="$ctrl.openDrawer()"></toolbar>
+<div class="app">
+  <drawer drawer-opened="$ctrl.drawerOpened.value"></drawer>
+  <div class="app__container">
+    <toolbar on-menu-click="$ctrl.openDrawer()"></toolbar>
+    <div class="app__container-content"></div>
+  </div>
+</div>
