@@ -1,10 +1,9 @@
-<md-list ng-cloak>
+<md-list class="accounts drawer-menu" ng-cloak>
   <md-list-item ng-repeat="item in $ctrl.accounts" ng-click="addAccountItemClick()">
     <md-icon md-font-set="material-icons"> account_balance </md-icon>
     <p>
       {{item.name}} {{item.balance}} {{item.currency}}
-
-
+      <button-more class="drawer-menu__more-button"></button-more>
     </p>
   </md-list-item>
 </md-list>

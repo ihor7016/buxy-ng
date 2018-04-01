@@ -1,5 +1,6 @@
 import angular from "angular";
 import template from "./accounts.html";
+import { buttonMoreModule } from "../button-more/button-more";
 class AccountsController {
   constructor() {
     this.accounts = [
@@ -30,7 +31,7 @@ class AccountsController {
   addAccountItemClick() {}
 }
 export const accountsModule = angular
-  .module("accounts", ["ngMaterial"])
+  .module("accounts", ["ngMaterial", buttonMoreModule])
   .component("accounts", {
     template,
     controller: AccountsController
