@@ -1,4 +1,7 @@
 import angular from "angular";
+import "angular-animate";
+import "angular-aria";
+import "angular-material";
 import template from "./drawer.html";
 import { accountsModule } from "../accounts/accounts";
 import { tagsModule } from "../tags/tags";
