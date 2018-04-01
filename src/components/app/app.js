@@ -22,7 +22,7 @@ export class AppController {
 }
 
 export const appModule = angular
-  .module("appModule", [drawerModule, toolbarModule])
+  .module("appModule", ["ngMaterial", drawerModule, toolbarModule])
   .component("app", {
     controller: AppController,
     template
