@@ -28,7 +28,7 @@ class AccountsController {
     ];
   }
 
-  addAccountItemClick() {}
+  accountsItemClick() {}
 }
 export const accountsModule = angular
   .module("accounts", ["ngMaterial", buttonMoreModule])
