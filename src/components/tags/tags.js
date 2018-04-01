@@ -3,17 +3,7 @@ import template from "./tags.html";
 import { buttonMoreModule } from "../button-more/button-more";
 class TagsController {
   constructor() {
-    this.tags = [
-      {
-        name: "tttt"
-      },
-      {
-        name: "yyyy"
-      },
-      {
-        name: "uuuu"
-      }
-    ];
+    this.tags = ["tag1", "tag2", "tag3"];
   }
 
   tagsItemClick() {}
