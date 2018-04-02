@@ -1,9 +1,6 @@
 import angular from "angular";
 import template from "./app.html";
 import { drawerModule } from "../drawer/drawer";
-import "angular-animate";
-import "angular-aria";
-import "angular-material";
 import { toolbarModule } from "../toolbar/toolbar";
 
 export class AppController {
@@ -22,7 +19,7 @@ export class AppController {
 }
 
 export const appModule = angular
-  .module("appModule", ["ngMaterial", drawerModule, toolbarModule])
+  .module("appModule", [drawerModule, toolbarModule])
   .component("app", {
     controller: AppController,
     template
