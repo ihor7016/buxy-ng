@@ -27,19 +27,22 @@ export class TransactionDialogController {
       targetEvent: ev,
       clickOutsideToClose: true,
       locals: {
-        props: this
+        $mdDialog: this.$mdDialog,
+        $filter: this.$filter,
+        tags: this.tags,
+        accounts: this.accounts
       }
     });
   }
 }
 
 class DialogController {
-  constructor(props) {
-    this.$mdDialog = props.$mdDialog;
-    this.$filter = props.$filter;
+  constructor($mdDialog, $filter, tags, accounts) {
+    this.$mdDialog = $mdDialog;
+    this.$filter = $filter;
     this.date = new Date();
-    this.tags = props.tags;
-    this.accounts = props.accounts;
+    this.tags = tags;
+    this.accounts = accounts;
   }
 
   submit() {
