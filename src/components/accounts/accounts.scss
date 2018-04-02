@@ -1,3 +1,6 @@
 .accounts {
   padding: 0;
+  &__item:hover {
+    background-color: #eeeeee;
+  }
 }
