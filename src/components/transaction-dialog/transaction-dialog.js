@@ -29,6 +29,7 @@ export class TransactionDialogController {
     });
   }
 }
+
 class DialogController {
   constructor(props) {
     this.$mdDialog = props.$mdDialog;
