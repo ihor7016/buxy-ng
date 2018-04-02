@@ -10,7 +10,9 @@ class TagsController {
     this.tags = ["tag1", "tag2", "tag3"];
   }
 
-  handleItemClick() {}
+  handleItemClick() {
+    console.log();
+  }
 }
 
 export const tagsModule = angular

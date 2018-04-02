@@ -11,9 +11,13 @@ export class DrawerController {
     this.$mdSidenav = $mdSidenav;
     this.isOpened = false;
   }
-  handleAccountClick(event) {}
+  handleAccountClick(event) {
+    console.log();
+  }
 
-  addTagClick(event) {}
+  addTagClick(event) {
+    console.log();
+  }
 
   $onChanges(changes) {
     this.toggleLeft();

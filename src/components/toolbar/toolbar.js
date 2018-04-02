@@ -9,7 +9,9 @@ class ToolbarController {
     this.onMenuClick();
   }
 
-  handleAboutClick() {}
+  handleAboutClick() {
+    console.log();
+  }
 }
 
 export const toolbarModule = angular
