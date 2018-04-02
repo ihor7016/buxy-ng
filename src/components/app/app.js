@@ -7,11 +7,11 @@ import { transactionDialogModule } from "../transaction-dialog/transaction-dialo
 
 export class AppController {
   constructor() {
-    this.transactionDialogShow;
+    this.transactionDialogOpen;
   }
 
   onAddTransactionClick(event) {
-    this.transactionDialogShow = { event: event };
+    this.transactionDialogOpen = { event: event };
   }
 }
 

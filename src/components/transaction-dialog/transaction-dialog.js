@@ -12,8 +12,8 @@ export class TransactionDialogController {
   }
 
   $onChanges(changes) {
-    if (changes.show.currentValue) {
-      this.showDialog(changes.show.currentValue.event);
+    if (changes.isOpen.currentValue) {
+      this.showDialog(changes.isOpen.currentValue.event);
     }
   }
 
@@ -62,6 +62,6 @@ export const transactionDialogModule = angular
   .component("transactionDialog", {
     controller: TransactionDialogController,
     bindings: {
-      show: "<"
+      isOpen: "<"
     }
   }).name;
