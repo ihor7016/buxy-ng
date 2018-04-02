@@ -24,8 +24,8 @@ export class AccountDialogController {
   }
 
   $onChanges(changes) {
-    if (changes.show.currentValue) {
-      this.showDialog(changes.show.currentValue.event);
+    if (changes.isOpen.currentValue) {
+      this.showDialog(changes.isOpen.currentValue.event);
     }
   }
 
@@ -70,6 +70,6 @@ export const accountDialogModule = angular
   .component("accountDialog", {
     controller: AccountDialogController,
     bindings: {
-      show: "<"
+      isOpen: "<"
     }
   }).name;
