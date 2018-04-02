@@ -4,6 +4,7 @@ import "angular-aria";
 import "angular-material";
 import template from "./accounts.html";
 import { buttonMoreModule } from "../button-more/button-more";
+
 class AccountsController {
   constructor() {
     this.accounts = [

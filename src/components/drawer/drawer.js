@@ -12,6 +12,7 @@ export class DrawerController {
     this.isOpened = false;
   }
   addAccountClick(event) {}
+
   addTagClick(event) {}
 
   $onChanges(changes) {
