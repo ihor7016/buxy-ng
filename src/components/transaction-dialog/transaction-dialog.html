@@ -3,16 +3,17 @@
     <md-dialog-content class="md-dialog-content">
       <h2>Add transaction</h2>
       <div layout="row">
-        <md-input-container flex="45" class="dialog__type">
+        <md-input-container flex="45" class="dialog__row">
           <md-radio-group ng-model="$ctrl.type" layout-gt-md="row" layout="column">
-            <span class="dialog__type-text">Type of transaction: </span>
+            <span class="dialog__row-text">Type of transaction: </span>
             <md-radio-button value="-" class="md-primary">Expense</md-radio-button>
             <md-radio-button value="+" class="md-primary">Income</md-radio-button>
           </md-radio-group>
         </md-input-container>
         <span flex="10"></span>
-        <md-input-container class="date-picker" flex="45">
-          <label>Date of transaction</label>
+        <md-input-container class="date-picker" flex="45" layout-gt-md="row" layout="column">
+          <div class="dialog__row">
+            <span class="dialog__row-text">Date of transaction: </span></div>
           <md-datepicker ng-model="$ctrl.date" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
         </md-input-container>
       </div>
