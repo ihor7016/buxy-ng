@@ -23,6 +23,7 @@ export class DrawerController {
     this.isOpened = !this.isOpened;
   }
 }
+
 export const drawerModule = angular
   .module("drawer", ["ngMaterial", accountsModule, tagsModule])
   .component("drawer", {

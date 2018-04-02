@@ -3,6 +3,7 @@ import "angular-animate";
 import "angular-aria";
 import "angular-material";
 import template from "./toolbar.html";
+
 class ToolbarController {
   handleMenuClick() {
     this.onMenuClick();
@@ -10,6 +11,7 @@ class ToolbarController {
 
   handleAboutClick() {}
 }
+
 export const toolbarModule = angular
   .module("toolbar", ["ngMaterial"])
   .component("toolbar", {

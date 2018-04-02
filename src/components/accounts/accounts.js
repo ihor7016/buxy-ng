@@ -34,6 +34,7 @@ class AccountsController {
 
   handleItemClick() {}
 }
+
 export const accountsModule = angular
   .module("accounts", ["ngMaterial", buttonMoreModule])
   .component("accounts", {
