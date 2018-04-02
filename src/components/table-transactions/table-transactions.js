@@ -1,5 +1,6 @@
 import angular from "angular";
 import uiGrid from "angular-ui-grid";
+import angularAnimate from "angular-animate";
 
 import template from "./table-transactions.html";
 
@@ -32,7 +33,7 @@ export class GridController {
 }
 
 export const tableTransactionsModule = angular
-  .module("tableTransactions", ["ui.grid"])
+  .module("tableTransactions", ["ngAnimate", "ui.grid"])
   .component("tableTransactions", {
     controller: GridController,
     template
