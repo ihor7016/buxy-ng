@@ -33,7 +33,7 @@ class AccountsController {
   }
 
   handleItemClick() {
-    console.log();
+    console.log("handleItemClick");
   }
 }
 

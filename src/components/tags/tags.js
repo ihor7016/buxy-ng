@@ -11,7 +11,7 @@ class TagsController {
   }
 
   handleItemClick() {
-    console.log();
+    console.log("handleItemClick");
   }
 }
 

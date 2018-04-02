@@ -1,11 +1,11 @@
 <md-sidenav class="drawer md-sidenav-left" md-is-locked-open="$ctrl.isOpened" md-disable-backdrop md-whiteframe="4">
-  <md-list-item ng-click="handleAccountClick($event)">
+  <md-list-item ng-click="$ctrl.handleAccountClick($event)">
     <md-icon md-font-set="material-icons"> add </md-icon>
     <p> Add new account</p>
   </md-list-item>
   <accounts></accounts>
   <md-divider></md-divider>
-  <md-list-item ng-click="addTagClick($event)">
+  <md-list-item ng-click="$ctrl.addTagClick($event)">
     <md-icon md-font-set="material-icons"> add </md-icon>
     <p>Add new tag</p>
   </md-list-item>

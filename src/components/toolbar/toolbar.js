@@ -10,7 +10,7 @@ class ToolbarController {
   }
 
   handleAboutClick() {
-    console.log();
+    console.log("handleAboutClick");
   }
 }
 

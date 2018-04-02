@@ -12,11 +12,11 @@ export class DrawerController {
     this.isOpened = false;
   }
   handleAccountClick(event) {
-    console.log();
+    console.log("handleAccountClick");
   }
 
   addTagClick(event) {
-    console.log();
+    console.log("addTagClick");
   }
 
   $onChanges(changes) {
