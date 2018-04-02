@@ -22,10 +22,13 @@ export class TransactionDialogController {
     this.$mdDialog.show({
       template,
       controllerAs: "$ctrl",
-      controller: () => new DialogController(this),
+      controller: DialogController,
       parent: angular.element(document.body),
       targetEvent: ev,
-      clickOutsideToClose: true
+      clickOutsideToClose: true,
+      locals: {
+        props: this
+      }
     });
   }
 }
