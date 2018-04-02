@@ -11,7 +11,7 @@ export class DrawerController {
     this.$mdSidenav = $mdSidenav;
     this.isOpened = false;
   }
-  addAccountClick(event) {}
+  handleAccountClick(event) {}
 
   addTagClick(event) {}
 
