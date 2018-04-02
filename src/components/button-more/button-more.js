@@ -5,8 +5,18 @@ import "angular-material";
 import template from "./button-more.html";
 import { popupModule } from "./popup/popup";
 
+export class ButtonMoreController {
+  constructor() {
+    this.position = "right";
+  }
+}
+
 export const buttonMoreModule = angular
   .module("buttonMore", ["ngMaterial", popupModule])
   .component("buttonMore", {
-    template
+    template,
+    controller: ButtonMoreController,
+    bindings: {
+      position: "@"
+    }
   }).name;
