@@ -6,7 +6,7 @@ import { toolbarModule } from "../toolbar/toolbar";
 export class AppController {
   constructor() {
     this.tasks = [];
-    this.drawerOpened = { value: false };
+    this.drawerOpened = false;
   }
 
   handleTaskAdd(task) {
@@ -14,7 +14,7 @@ export class AppController {
   }
 
   openDrawer() {
-    this.drawerOpened.value = !this.drawerOpened.value;
+    this.drawerOpened = !this.drawerOpened;
   }
 }
 

@@ -1,3 +1,5 @@
-.toolbar md-toolbar md-icon.md-default-theme {
-  color: white;
+.toolbar {
+  & md-toolbar md-icon.md-default-theme {
+    color: white;
+  }
 }
