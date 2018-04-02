@@ -2,7 +2,7 @@
   <md-list-item ng-repeat="item in $ctrl.accounts" ng-click="accountsItemClick()">
     <md-icon md-font-set="material-icons"> account_balance </md-icon>
     <p>
-      {{item.name}} {{item.balance}} {{item.currency}}
+      {{item.name}} {{item.balance}}{{item.currency}}
       <button-more class="drawer-menu__more-button"></button-more>
     </p>
   </md-list-item>
