@@ -6,10 +6,6 @@ import ngMaterial from "angular-material";
 import { transactionDialogModule } from "../transaction-dialog/transaction-dialog";
 
 export class AppController {
-  constructor() {
-    this.transactionDialogOpen;
-  }
-
   onAddTransactionClick(event) {
     this.transactionDialogOpen = { event: event };
   }

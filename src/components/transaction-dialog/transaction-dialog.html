@@ -16,7 +16,7 @@
           <md-datepicker ng-model="$ctrl.date" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
         </md-input-container>
       </div>
-      <div layout='row' layout-align="space-between center">
+      <div layout="row" layout-align="space-between center">
         <md-input-container flex="45">
           <label>Description</label>
           <input ng-model="$ctrl.description" type="text">
@@ -26,7 +26,7 @@
           <input ng-model="$ctrl.amount" type="text">
         </md-input-container>
       </div>
-      <div layout='row' layout-align="space-between center">
+      <div layout="row" layout-align="space-between center">
         <md-input-container flex="45">
           <label>Account</label>
           <md-select ng-model="$ctrl.account">
@@ -46,10 +46,10 @@
       </div>
     </md-dialog-content>
     <md-dialog-actions layout="row" layout-align="end">
-      <md-button class="md-primary" ng-click="$ctrl.abort('cancel')">
+      <md-button class="md-primary" ng-click="$ctrl.abort()">
         Cancel
       </md-button>
-      <md-button type="submit" class="md-primary" ng-click="$ctrl.submit('ok')">
+      <md-button type="submit" class="md-primary" ng-click="$ctrl.submit()">
         Ok
       </md-button>
     </md-dialog-actions>
