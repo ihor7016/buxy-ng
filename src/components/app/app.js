@@ -6,7 +6,7 @@ import { toolbarModule } from "../toolbar/toolbar";
 export class AppController {
   constructor() {
     this.tasks = [];
-    this.drawerOpened = false;
+    this.drawerOpened = true;
   }
 
   handleTaskAdd(task) {

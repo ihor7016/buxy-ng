@@ -1,3 +1,7 @@
+<md-list-item ng-click="$ctrl.handleAccountClick($event)">
+  <md-icon md-font-set="material-icons"> add </md-icon>
+  <p> Add new account</p>
+</md-list-item>
 <md-list class="accounts drawer-menu" ng-cloak>
   <md-list-item ng-repeat="item in $ctrl.accounts" ng-click="handleItemClick()">
     <md-icon md-font-set="material-icons"> account_balance </md-icon>
