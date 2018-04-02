@@ -1,7 +1,7 @@
 import angular from "angular";
 import "angular-animate";
 import "angular-aria";
-import "angular-material";
+import ngMaterial from "angular-material";
 import template from "./toolbar.html";
 
 class ToolbarController {
@@ -15,7 +15,7 @@ class ToolbarController {
 }
 
 export const toolbarModule = angular
-  .module("toolbar", ["ngMaterial"])
+  .module("toolbar", [ngMaterial])
   .component("toolbar", {
     template,
     controller: ToolbarController,

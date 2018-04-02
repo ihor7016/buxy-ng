@@ -1,7 +1,7 @@
 import angular from "angular";
 import "angular-animate";
 import "angular-aria";
-import "angular-material";
+import ngMaterial from "angular-material";
 import template from "./drawer.html";
 import { accountsModule } from "../accounts/accounts";
 import { tagsModule } from "../tags/tags";
@@ -29,7 +29,7 @@ export class DrawerController {
 }
 
 export const drawerModule = angular
-  .module("drawer", ["ngMaterial", accountsModule, tagsModule])
+  .module("drawer", [ngMaterial, accountsModule, tagsModule])
   .component("drawer", {
     controller: DrawerController,
     bindings: {
