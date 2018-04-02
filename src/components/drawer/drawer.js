@@ -11,8 +11,12 @@ export class DrawerController {
     this.$mdSidenav = $mdSidenav;
     this.isOpened = false;
   }
-  addAccountClick(event) {}
-  addTagClick(event) {}
+  addAccountClick(event) {
+    console.log();
+  }
+  addTagClick(event) {
+    console.log();
+  }
 
   $onChanges(changes) {
     this.toggleLeft();
@@ -22,6 +26,7 @@ export class DrawerController {
     this.isOpened = !this.isOpened;
   }
 }
+
 export const drawerModule = angular
   .module("drawer", ["ngMaterial", accountsModule, tagsModule])
   .component("drawer", {
