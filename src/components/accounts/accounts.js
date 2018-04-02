@@ -1,6 +1,6 @@
 import angular from "angular";
-import "angular-animate";
-import "angular-aria";
+import ngAnimate from "angular-animate";
+import ngAria from "angular-aria";
 import ngMaterial from "angular-material";
 import template from "./accounts.html";
 import { buttonMoreModule } from "../button-more/button-more";
@@ -38,7 +38,7 @@ class AccountsController {
 }
 
 export const accountsModule = angular
-  .module("accounts", [ngMaterial, buttonMoreModule])
+  .module("accounts", [ngMaterial, ngAria, ngAnimate, buttonMoreModule])
   .component("accounts", {
     template,
     controller: AccountsController
