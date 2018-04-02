@@ -28,7 +28,7 @@ export const drawerModule = angular
   .component("drawer", {
     controller: DrawerController,
     bindings: {
-      drawerOpened: "<"
+      isDrawerOpened: "<"
     },
     template
   }).name;
