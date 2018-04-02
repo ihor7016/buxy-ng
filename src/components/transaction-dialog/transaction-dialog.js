@@ -36,7 +36,7 @@ export class TransactionDialogController {
   }
 }
 
-class DialogController {
+export class DialogController {
   constructor($mdDialog, $filter, tags, accounts) {
     this.$mdDialog = $mdDialog;
     this.$filter = $filter;
