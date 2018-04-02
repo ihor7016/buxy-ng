@@ -5,8 +5,9 @@ import ngAnimate from "angular-animate";
 import ngMaterial from "angular-material";
 
 export class TransactionDialogController {
-  constructor($mdDialog) {
+  constructor($mdDialog, $filter) {
     this.$mdDialog = $mdDialog;
+    this.$filter = $filter;
     this.tags = ["transport", "food", "salary"];
     this.accounts = ["Privat", "BoaBank", "Cash"];
   }
@@ -21,39 +22,36 @@ export class TransactionDialogController {
     this.$mdDialog.show({
       template,
       controllerAs: "$ctrl",
-      controller: this.dialogController(),
+      controller: () => new DialogController(this),
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose: true
     });
   }
-  dialogController() {
-    const self = this;
-    return class {
-      constructor($mdDialog, $filter) {
-        this.$mdDialog = $mdDialog;
-        this.$filter = $filter;
-        this.date = new Date();
-        this.tags = self.tags;
-        this.accounts = self.accounts;
-      }
+}
+class DialogController {
+  constructor(props) {
+    this.$mdDialog = props.$mdDialog;
+    this.$filter = props.$filter;
+    this.date = new Date();
+    this.tags = props.tags;
+    this.accounts = props.accounts;
+  }
 
-      submit() {
-        console.log({
-          type: this.type,
-          desc: this.description,
-          amount: this.amount,
-          date: this.$filter("date")(this.date, "yyyy-MM-dd"),
-          account: this.account,
-          tag: this.tag
-        });
-        this.$mdDialog.hide();
-      }
+  submit() {
+    console.log({
+      type: this.type,
+      desc: this.description,
+      amount: this.amount,
+      date: this.$filter("date")(this.date, "yyyy-MM-dd"),
+      account: this.account,
+      tag: this.tag
+    });
+    this.$mdDialog.hide();
+  }
 
-      abort() {
-        this.$mdDialog.cancel();
-      }
-    };
+  abort() {
+    this.$mdDialog.cancel();
   }
 }
 
