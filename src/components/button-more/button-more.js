@@ -6,9 +6,7 @@ import template from "./button-more.html";
 import { popupModule } from "./popup/popup";
 
 export class ButtonMoreController {
-  constructor() {
-    this.position = "right";
-  }
+  constructor() {}
 }
 
 export const buttonMoreModule = angular
