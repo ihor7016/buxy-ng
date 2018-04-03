@@ -31,10 +31,6 @@ class AccountsController {
       }
     ];
   }
-
-  handleItemClick() {
-    console.log("handleItemClick");
-  }
 }
 
 export const accountsModule = angular
