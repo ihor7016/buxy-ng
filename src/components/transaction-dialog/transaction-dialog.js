@@ -12,24 +12,26 @@ export class TransactionDialogController {
   }
 
   $onChanges(changes) {
-    if (changes.isOpen.currentValue.isOpen === true) {
-      this.showDialog(changes.isOpen.currentValue.openEvent);
+    if (changes.isOpen.currentValue === true) {
+      this.showDialog(changes.openEvent.currentValue);
     }
   }
 
   showDialog(ev) {
-    this.$mdDialog.show({
-      template,
-      controllerAs: "$ctrl",
-      controller: DialogController,
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose: true,
-      locals: {
-        tags: this.tags,
-        accounts: this.accounts
-      }
-    });
+    this.$mdDialog
+      .show({
+        template,
+        controllerAs: "$ctrl",
+        controller: DialogController,
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        locals: {
+          tags: this.tags,
+          accounts: this.accounts
+        }
+      })
+      .then(() => this.onDialogClose(), () => this.onDialogClose());
   }
 }
 
@@ -64,6 +66,8 @@ export const transactionDialogModule = angular
   .component("transactionDialog", {
     controller: TransactionDialogController,
     bindings: {
-      isOpen: "<"
+      isOpen: "<",
+      openEvent: "<",
+      onDialogClose: "&"
     }
   }).name;

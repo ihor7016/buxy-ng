@@ -8,11 +8,13 @@ import ngAria from "angular-aria";
 import { transactionDialogModule } from "../transaction-dialog/transaction-dialog";
 
 export class AppController {
-  constructor() {
-    this.transactionDialogOpen = { isOpen: false };
-  }
   handleAddTransactionClick(event) {
-    this.transactionDialogOpen = { isOpen: true, openEvent: event };
+    this.transactionDialogOpen = true;
+    this.transactionDialogEvent = event;
+  }
+
+  handleTransactionDialogClose() {
+    this.transactionDialogOpen = false;
   }
 }
 

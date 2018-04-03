@@ -1,5 +1,6 @@
 <div class="app">
-  <transaction-dialog is-open="$ctrl.transactionDialogOpen"></transaction-dialog>
+  <transaction-dialog is-open="$ctrl.transactionDialogOpen" open-event="$ctrl.transactionDialogEvent" on-dialog-close="$ctrl.handleTransactionDialogClose()">
+  </transaction-dialog>
   <md-button class="app__transaction-dialog-activation md-fab md-primary" aria-label="FAB" ng-click="$ctrl.handleAddTransactionClick($event)">
     <md-icon>
       <i class="material-icons">add</i>
