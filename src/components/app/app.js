@@ -9,12 +9,12 @@ import { transactionDialogModule } from "../transaction-dialog/transaction-dialo
 
 export class AppController {
   handleAddTransactionClick(event) {
-    this.transactionDialogOpen = true;
-    this.transactionDialogEvent = event;
+    this.isTransactionDialogOpen = true;
+    this.transactionDialogOpenEvent = event;
   }
 
   handleTransactionDialogClose() {
-    this.transactionDialogOpen = false;
+    this.isTransactionDialogOpen = false;
   }
 }
 
