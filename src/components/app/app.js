@@ -1,29 +1,23 @@
 import angular from "angular";
 import template from "./app.html";
 
-import ngMaterial from "angular-material";
-
-import { accountDialogModule } from "../account-dialog/account-dialog";
+import { drawerModule } from "../drawer/drawer";
+import { toolbarModule } from "../toolbar/toolbar";
+import { transactionsModule } from "../transactions/transactions";
 
 export class AppController {
-  handleAddAccountClick(event) {
-    this.isAccountDialogOpen = true;
-    this.accountDialogOpenEvent = event;
+  constructor() {
+    this.drawerOpened = true;
   }
 
-  handleAccountDialogSubmit(data) {
-    console.log(data);
-    this.isAccountDialogOpen = false;
-  }
-
-  handleAccountDialogClose() {
-    this.isAccountDialogOpen = false;
+  openDrawer() {
+    this.drawerOpened = !this.drawerOpened;
   }
 }
 
 export const appModule = angular
-  .module("appModule", [ngMaterial, accountDialogModule])
+  .module("appModule", [drawerModule, toolbarModule, transactionsModule])
   .component("app", {
-    template,
-    controller: AppController
+    controller: AppController,
+    template
   }).name;
