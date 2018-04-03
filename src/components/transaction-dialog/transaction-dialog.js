@@ -13,8 +13,8 @@ export class TransactionDialogController {
   }
 
   $onChanges(changes) {
-    if (changes.isOpen.currentValue) {
-      this.showDialog(changes.isOpen.currentValue.event);
+    if (changes.isOpen.currentValue.isOpen === true) {
+      this.showDialog(changes.isOpen.currentValue.openEvent);
     }
   }
 
@@ -27,8 +27,6 @@ export class TransactionDialogController {
       targetEvent: ev,
       clickOutsideToClose: true,
       locals: {
-        $mdDialog: this.$mdDialog,
-        $filter: this.$filter,
         tags: this.tags,
         accounts: this.accounts
       }
