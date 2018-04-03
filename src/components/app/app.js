@@ -1,31 +1,10 @@
 import angular from "angular";
 import template from "./app.html";
 
-import ngMaterial from "angular-material";
-import ngAnimate from "angular-animate";
-import ngAria from "angular-aria";
-
-import { transactionDialogModule } from "../transaction-dialog/transaction-dialog";
-
-export class AppController {
-  handleAddTransactionClick(event) {
-    this.isTransactionDialogOpen = true;
-    this.transactionDialogOpenEvent = event;
-  }
-
-  handleTransactionDialogSubmit(data) {
-    console.log(data);
-    this.isTransactionDialogOpen = false;
-  }
-
-  handleTransactionDialogClose() {
-    this.isTransactionDialogOpen = false;
-  }
-}
+import { transactionsModule } from "../transactions/transactions";
 
 export const appModule = angular
-  .module("appModule", [ngMaterial, ngAnimate, ngAria, transactionDialogModule])
+  .module("appModule", [transactionsModule])
   .component("app", {
-    template,
-    controller: AppController
+    template
   }).name;
