@@ -9,9 +9,9 @@ export class AppController {
     this.drawerOpened = true;
   }
 
-  handleTaskAdd(task) {
-    this.tasks.push(task);
-  }
+  // handleTaskAdd(task) {
+  //   this.tasks.push(task);
+  // }
 
   openDrawer() {
     this.drawerOpened = !this.drawerOpened;

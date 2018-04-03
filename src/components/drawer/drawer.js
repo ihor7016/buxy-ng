@@ -10,13 +10,6 @@ export class DrawerController {
   constructor($mdSidenav) {
     this.$mdSidenav = $mdSidenav;
   }
-  handleAddTagClick(event) {
-    console.log("handleAddTagClick");
-  }
-
-  handleAddTagClick(event) {
-    console.log("handleAddTagClick");
-  }
 }
 
 export const drawerModule = angular
