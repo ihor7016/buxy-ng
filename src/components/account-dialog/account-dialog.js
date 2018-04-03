@@ -24,44 +24,50 @@ export class AccountDialogController {
   }
 
   $onChanges(changes) {
-    if (changes.isOpen.currentValue) {
-      this.showDialog(changes.isOpen.currentValue.event);
+    if (changes.isOpen.currentValue === true) {
+      this.showDialog(changes.openEvent.currentValue);
     }
   }
 
   showDialog(ev) {
-    this.$mdDialog.show({
-      template,
-      controllerAs: "$ctrl",
-      controller: this.dialogController(),
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose: true
+    this.$mdDialog
+      .show({
+        template,
+        controllerAs: "$ctrl",
+        controller: DialogController,
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        locals: {
+          types: this.types,
+          currencies: this.currencies
+        }
+      })
+      .then(
+        data => this.onDialogSubmit({ data: data }),
+        () => this.onDialogClose()
+      );
+  }
+}
+
+export class DialogController {
+  constructor($mdDialog, types, currencies) {
+    this.$mdDialog = $mdDialog;
+    this.types = types;
+    this.currencies = currencies;
+  }
+
+  submit() {
+    this.$mdDialog.hide({
+      name: this.account,
+      balance: parseInt(this.balance),
+      type: this.type,
+      currency: this.currency
     });
   }
-  dialogController() {
-    const self = this;
-    return class {
-      constructor($mdDialog) {
-        this.$mdDialog = $mdDialog;
-        this.types = self.types;
-        this.currencies = self.currencies;
-      }
 
-      submit() {
-        console.log({
-          name: this.account,
-          balance: this.balance,
-          type: this.type,
-          currency: this.currency
-        });
-        this.$mdDialog.hide();
-      }
-
-      abort() {
-        this.$mdDialog.cancel();
-      }
-    };
+  abort() {
+    this.$mdDialog.cancel();
   }
 }
 
@@ -70,6 +76,9 @@ export const accountDialogModule = angular
   .component("accountDialog", {
     controller: AccountDialogController,
     bindings: {
-      isOpen: "<"
+      isOpen: "<",
+      openEvent: "<",
+      onDialogSubmit: "&",
+      onDialogClose: "&"
     }
   }).name;

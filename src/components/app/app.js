@@ -6,12 +6,18 @@ import ngMaterial from "angular-material";
 import { accountDialogModule } from "../account-dialog/account-dialog";
 
 export class AppController {
-  constructor() {
-    this.accountDialogShow;
+  handleAddAccountClick(event) {
+    this.isAccountDialogOpen = true;
+    this.accountDialogOpenEvent = event;
   }
 
-  onAddAccountClick(event) {
-    this.accountDialogShow = { event: event };
+  handleAccountDialogSubmit(data) {
+    console.log(data);
+    this.isAccountDialogOpen = false;
+  }
+
+  handleAccountDialogClose() {
+    this.isAccountDialogOpen = false;
   }
 }
 

@@ -1,2 +1,2 @@
-<account-dialog is-open="$ctrl.accountDialogShow"></account-dialog>
-<md-button ng-click="$ctrl.onAddAccountClick($event)">add account</md-button>
+<account-dialog is-open="$ctrl.isAccountDialogOpen" open-event="$ctrl.accountDialogOpenEvent" on-dialog-submit="$ctrl.handleAccountDialogSubmit(data)" on-dialog-close="$ctrl.handleAccountDialogClose()"></account-dialog>
+<md-button ng-click="$ctrl.handleAddAccountClick($event)">add account</md-button>
