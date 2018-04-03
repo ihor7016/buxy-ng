@@ -1,7 +1,9 @@
 import angular from "angular";
 import template from "./app.html";
+
 import { drawerModule } from "../drawer/drawer";
 import { toolbarModule } from "../toolbar/toolbar";
+import { transactionsModule } from "../transactions/transactions";
 
 export class AppController {
   constructor() {
@@ -14,7 +16,7 @@ export class AppController {
 }
 
 export const appModule = angular
-  .module("appModule", [drawerModule, toolbarModule])
+  .module("appModule", [drawerModule, toolbarModule, transactionsModule])
   .component("app", {
     controller: AppController,
     template
