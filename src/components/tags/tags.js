@@ -9,6 +9,9 @@ class TagsController {
   constructor() {
     this.tags = ["tag1", "tag2", "tag3"];
   }
+  handleAddTagClick() {
+    console.log("handleAddTagClick");
+  }
 }
 
 export const tagsModule = angular

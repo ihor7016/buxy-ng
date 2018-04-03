@@ -5,10 +5,6 @@ import ngMaterial from "angular-material";
 import template from "./toolbar.html";
 
 class ToolbarController {
-  handleMenuClick() {
-    this.onMenuClick();
-  }
-
   handleAboutClick() {
     console.log("handleAboutClick");
   }

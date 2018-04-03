@@ -31,6 +31,10 @@ class AccountsController {
       }
     ];
   }
+
+  handleAddAccountClick() {
+    console.log("handleAddAccountClick");
+  }
 }
 
 export const accountsModule = angular

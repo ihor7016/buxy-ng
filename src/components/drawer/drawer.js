@@ -10,12 +10,12 @@ export class DrawerController {
   constructor($mdSidenav) {
     this.$mdSidenav = $mdSidenav;
   }
-  handleAccountClick(event) {
-    console.log("handleAccountClick");
+  handleAddTagClick(event) {
+    console.log("handleAddTagClick");
   }
 
-  addTagClick(event) {
-    console.log("addTagClick");
+  handleAddTagClick(event) {
+    console.log("handleAddTagClick");
   }
 }
 
