@@ -1,6 +1,7 @@
 @import "~normalize.css";
 
 @import "~angular-material/angular-material.css";
+
 @import "./components/drawer/drawer";
 @import "./components/toolbar/toolbar";
 @import "./components/accounts/accounts";
@@ -9,3 +10,5 @@
 @import "./components/tags/tags";
 @import "./components/button-more/popup/popup";
 @import "./components/app/app";
+@import "./components/dialog/dialog";
+@import "./components/transactions/transactions";

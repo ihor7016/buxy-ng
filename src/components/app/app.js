@@ -1,28 +1,22 @@
 import angular from "angular";
 import template from "./app.html";
+
 import { drawerModule } from "../drawer/drawer";
-import "angular-animate";
-import "angular-aria";
-import "angular-material";
 import { toolbarModule } from "../toolbar/toolbar";
+import { transactionsModule } from "../transactions/transactions";
 
 export class AppController {
   constructor() {
-    this.tasks = [];
-    this.drawerOpened = { value: false };
-  }
-
-  handleTaskAdd(task) {
-    this.tasks.push(task);
+    this.drawerOpened = true;
   }
 
   openDrawer() {
-    this.drawerOpened.value = !this.drawerOpened.value;
+    this.drawerOpened = !this.drawerOpened;
   }
 }
 
 export const appModule = angular
-  .module("appModule", ["ngMaterial", drawerModule, toolbarModule])
+  .module("appModule", [drawerModule, toolbarModule, transactionsModule])
   .component("app", {
     controller: AppController,
     template

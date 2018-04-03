@@ -1,0 +1,58 @@
+<md-dialog class="dialog">
+  <form ng-cloak>
+    <md-dialog-content class="md-dialog-content">
+      <h2>Add transaction</h2>
+      <div layout="row">
+        <md-input-container flex="45" class="dialog__row">
+          <md-radio-group ng-model="$ctrl.type" layout-gt-md="row" layout="column">
+            <span class="dialog__row-text">Type of transaction: </span>
+            <md-radio-button value="-" class="md-primary">Expense</md-radio-button>
+            <md-radio-button value="+" class="md-primary">Income</md-radio-button>
+          </md-radio-group>
+        </md-input-container>
+        <span flex="10"></span>
+        <md-input-container class="date-picker" flex="45" layout-gt-md="row" layout="column">
+          <div class="dialog__row">
+            <span class="dialog__row-text">Date of transaction: </span></div>
+          <md-datepicker ng-model="$ctrl.date" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+        </md-input-container>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <md-input-container flex="45">
+          <label>Description</label>
+          <input ng-model="$ctrl.description" type="text">
+        </md-input-container>
+        <md-input-container flex="45">
+          <label>Amount</label>
+          <input ng-model="$ctrl.amount" type="text">
+        </md-input-container>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <md-input-container flex="45">
+          <label>Account</label>
+          <md-select ng-model="$ctrl.account">
+            <md-option ng-repeat="account in $ctrl.accounts" value="{{account}}">
+              {{account}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container flex="45">
+          <label>Tag</label>
+          <md-select ng-model="$ctrl.tag">
+            <md-option ng-repeat="tag in $ctrl.tags" value="{{tag}}">
+              {{tag}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row" layout-align="end">
+      <md-button class="md-primary" ng-click="$ctrl.abort()">
+        Cancel
+      </md-button>
+      <md-button type="submit" class="md-primary" ng-click="$ctrl.submit()">
+        Ok
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

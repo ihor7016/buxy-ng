@@ -1,5 +1,9 @@
+<md-list-item ng-click="$ctrl.handleAddTagClick($event)">
+  <md-icon md-font-set="material-icons"> add </md-icon>
+  <p>Add new tag</p>
+</md-list-item>
 <md-list class="tags drawer-menu" ng-cloak>
-  <md-list-item ng-repeat="item in $ctrl.tags" ng-click="tagsItemClick()">
+  <md-list-item class="tags__item drawer-menu__item" ng-repeat="item in $ctrl.tags">
     <md-icon md-font-set="material-icons">local_offer</md-icon>
     <p>
       {{item}}
