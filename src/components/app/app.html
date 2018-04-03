@@ -1,2 +1,2 @@
-<about-dialog is-open="$ctrl.aboutDialogOpen"></about-dialog>
-<md-button ng-click="$ctrl.onAboutBtnClick($event)">about</md-button>
+<about-dialog is-open="$ctrl.isAboutDialogOpen" open-event="$ctrl.aboutDialogOpenEvent" on-dialog-close="$ctrl.handleAboutDialogClose()"></about-dialog>
+<md-button ng-click="$ctrl.handleAboutBtnClick($event)">about</md-button>

@@ -4,12 +4,13 @@ import template from "./app.html";
 import { aboutDialogModule } from "../about-dialog/about-dialog";
 
 export class AppController {
-  constructor() {
-    this.aboutDialogOpen;
+  handleAboutBtnClick(event) {
+    this.isAboutDialogOpen = true;
+    this.aboutDialogOpenEvent = event;
   }
 
-  onAboutBtnClick(event) {
-    this.aboutDialogOpen = { event: event };
+  handleAboutDialogClose() {
+    this.isAboutDialogOpen = false;
   }
 }
 
