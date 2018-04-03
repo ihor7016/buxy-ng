@@ -1,1 +1,9 @@
-<transactions></transactions>
+<div class="app" layout="row">
+  <drawer is-drawer-opened="$ctrl.drawerOpened"></drawer>
+  <div class="app__container" layout="column">
+    <toolbar on-menu-click="$ctrl.openDrawer()"></toolbar>
+    <div class="app__content">
+      <transactions></transactions>
+    </div>
+  </div>
+</div>
