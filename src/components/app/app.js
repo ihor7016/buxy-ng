@@ -1,29 +1,21 @@
 import angular from "angular";
 import template from "./app.html";
-
-import ngMaterial from "angular-material";
-
-import { tagDialogModule } from "../tag-dialog/tag-dialog";
+import { drawerModule } from "../drawer/drawer";
+import { toolbarModule } from "../toolbar/toolbar";
 
 export class AppController {
-  handleAddTagClick(event) {
-    this.isTagDialogOpen = true;
-    this.tagDialogOpenEvent = event;
+  constructor() {
+    this.drawerOpened = true;
   }
 
-  handleTagDialogSubmit(data) {
-    console.log(data);
-    this.isTagDialogOpen = false;
-  }
-
-  handleTagDialogClose() {
-    this.isTagDialogOpen = false;
+  openDrawer() {
+    this.drawerOpened = !this.drawerOpened;
   }
 }
 
 export const appModule = angular
-  .module("appModule", [ngMaterial, tagDialogModule])
+  .module("appModule", [drawerModule, toolbarModule])
   .component("app", {
-    template,
-    controller: AppController
+    controller: AppController,
+    template
   }).name;

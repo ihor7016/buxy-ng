@@ -1,2 +1,7 @@
-<tag-dialog is-open="$ctrl.isTagDialogOpen" open-event="$ctrl.tagDialogOpenEvent" on-dialog-submit="$ctrl.handleTagDialogSubmit(data)" on-dialog-close="$ctrl.handleTagDialogClose()"></tag-dialog>
-<md-button ng-click="$ctrl.handleAddTagClick($event)">add tag</md-button>
+<div class="app" layout="row">
+  <drawer is-drawer-opened="$ctrl.drawerOpened"></drawer>
+  <div class="app__container" layout="column">
+    <toolbar on-menu-click="$ctrl.openDrawer()"></toolbar>
+    <div class="app__content"></div>
+  </div>
+</div>

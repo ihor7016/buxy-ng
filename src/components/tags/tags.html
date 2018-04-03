@@ -1,0 +1,16 @@
+<div class="tags">
+  <md-list-item ng-click="$ctrl.handleAddTagClick($event)">
+    <md-icon md-font-set="material-icons"> add </md-icon>
+    <p>Add new tag</p>
+  </md-list-item>
+  <md-list class="tags__menu drawer-menu" ng-cloak>
+    <md-list-item class="tags__item drawer-menu__item" ng-repeat="item in $ctrl.tags">
+      <md-icon md-font-set="material-icons">local_offer</md-icon>
+      <p>
+        {{item}}
+        <button-more class="drawer-menu__more-button"></button-more>
+      </p>
+    </md-list-item>
+  </md-list>
+  <tag-dialog is-open="$ctrl.isTagDialogOpen" open-event="$ctrl.tagDialogOpenEvent" on-dialog-submit="$ctrl.handleTagDialogSubmit(data)" on-dialog-close="$ctrl.handleTagDialogClose()"></tag-dialog>
+</div>
