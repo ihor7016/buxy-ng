@@ -1,22 +1,23 @@
 import angular from "angular";
 import template from "./app.html";
 
-import { aboutDialogModule } from "../about-dialog/about-dialog";
+import { drawerModule } from "../drawer/drawer";
+import { toolbarModule } from "../toolbar/toolbar";
+import { transactionsModule } from "../transactions/transactions";
 
 export class AppController {
-  handleAboutBtnClick(event) {
-    this.isAboutDialogOpen = true;
-    this.aboutDialogOpenEvent = event;
+  constructor() {
+    this.drawerOpened = true;
   }
 
-  handleAboutDialogClose() {
-    this.isAboutDialogOpen = false;
+  openDrawer() {
+    this.drawerOpened = !this.drawerOpened;
   }
 }
 
 export const appModule = angular
-  .module("appModule", [aboutDialogModule])
+  .module("appModule", [drawerModule, toolbarModule, transactionsModule])
   .component("app", {
-    template,
-    controller: AppController
+    controller: AppController,
+    template
   }).name;

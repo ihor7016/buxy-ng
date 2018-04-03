@@ -1,0 +1,13 @@
+<md-toolbar class="toolbar md-hue-2">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" ng-click="$ctrl.onMenuClick()" aria-label="Favorite">
+      <md-icon>
+        <i class="material-icons">menu</i>
+      </md-icon>
+    </md-button>
+    <h2 flex md-truncate>Buxy</h2>
+    <md-button ng-click="$ctrl.handleAboutClick($event)">About</md-button>
+  </div>
+  <about-dialog is-open="$ctrl.isAboutDialogOpen" open-event="$ctrl.aboutDialogOpenEvent"
+    on-dialog-close="$ctrl.handleAboutDialogClose()"></about-dialog>
+</md-toolbar>
