@@ -32,7 +32,7 @@ export class TransactionDialogController {
         }
       })
       .then(
-        res => this.onDialogClose({ res: res }),
+        data => this.onDialogSubmit({ data: data }),
         () => this.onDialogClose()
       );
   }
@@ -51,7 +51,7 @@ export class DialogController {
     this.$mdDialog.hide({
       type: this.type,
       desc: this.description,
-      amount: this.amount,
+      amount: parseInt(this.amount),
       date: this.$filter("date")(this.date, "yyyy-MM-dd"),
       account: this.account,
       tag: this.tag
@@ -70,6 +70,7 @@ export const transactionDialogModule = angular
     bindings: {
       isOpen: "<",
       openEvent: "<",
-      onDialogClose: "&"
+      onDialogClose: "&",
+      onDialogSubmit: "&"
     }
   }).name;
