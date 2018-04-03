@@ -13,7 +13,8 @@ export class AppController {
     this.transactionDialogOpenEvent = event;
   }
 
-  handleTransactionDialogClose() {
+  handleTransactionDialogClose(res) {
+    console.log(res);
     this.isTransactionDialogOpen = false;
   }
 }

@@ -31,7 +31,10 @@ export class TransactionDialogController {
           accounts: this.accounts
         }
       })
-      .then(() => this.onDialogClose(), () => this.onDialogClose());
+      .then(
+        res => this.onDialogClose({ res: res }),
+        () => this.onDialogClose()
+      );
   }
 }
 
@@ -45,7 +48,7 @@ export class DialogController {
   }
 
   submit() {
-    console.log({
+    this.$mdDialog.hide({
       type: this.type,
       desc: this.description,
       amount: this.amount,
@@ -53,7 +56,6 @@ export class DialogController {
       account: this.account,
       tag: this.tag
     });
-    this.$mdDialog.hide();
   }
 
   abort() {
