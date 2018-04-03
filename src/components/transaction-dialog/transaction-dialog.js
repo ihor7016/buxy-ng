@@ -5,9 +5,8 @@ import ngAnimate from "angular-animate";
 import ngMaterial from "angular-material";
 
 export class TransactionDialogController {
-  constructor($mdDialog, $filter) {
+  constructor($mdDialog) {
     this.$mdDialog = $mdDialog;
-    this.$filter = $filter;
     this.tags = ["transport", "food", "salary"];
     this.accounts = ["Privat", "BoaBank", "Cash"];
   }
