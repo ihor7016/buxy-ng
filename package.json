@@ -20,7 +20,6 @@
     "css-loader": "^0.28.11",
     "husky": "^0.14.3",
     "js-beautify": "^1.7.5",
-    "json-loader": "^0.5.7",
     "lint-staged": "^7.0.0",
     "node-sass": "^4.8.3",
     "prettier": "^1.11.1",
