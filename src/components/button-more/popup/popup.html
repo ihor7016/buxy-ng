@@ -1,5 +1,12 @@
-<md-menu-item class="popup-menu" ng-click="$mdMenu.close()" ng-repeat="item in ['Edit','Delete']">
-  <md-button class="popup-menu__button">
-    {{item}}
-  </md-button>
-</md-menu-item>
+<md-menu-content class="popup-menu">
+  <md-menu-item class="popup-menu__item">
+    <md-button class="popup-menu__button" ng-click="$ctrl.handleItemClickEdit()">
+      Edit
+    </md-button>
+  </md-menu-item>
+  <md-menu-item class="popup-menu__item">
+    <md-button class="popup-menu__button" ng-click="$ctrl.handleItemClickDelete()">
+      Delete
+    </md-button>
+  </md-menu-item>
+</md-menu-content>
