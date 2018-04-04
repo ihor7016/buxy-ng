@@ -4,3 +4,8 @@
   font-family: "Roboto", arial, sans-serif;
   font-size: 13px;
 }
+
+.ui-grid,
+.ui-grid-viewport {
+  height: auto !important;
+}
