@@ -47,6 +47,13 @@ class AccountsController {
   handleAccountDialogClose() {
     this.isAccountDialogOpen = false;
   }
+
+  handleClickEditAccount() {
+    console.log("handleClickEditAccount");
+  }
+  handleClickDeleteAccount() {
+    console.log("handleClickDeleteAccount");
+  }
 }
 
 export const accountsModule = angular

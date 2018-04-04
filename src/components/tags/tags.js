@@ -17,6 +17,13 @@ class TagsController {
     this.tagDialogOpenEvent = event;
   }
 
+  handleClickEditTag() {
+    console.log("handleClickEditTag");
+  }
+  handleClickDeleteTag() {
+    console.log("handleClickDeleteTag");
+  }
+
   handleTagDialogSubmit(data) {
     console.log(data);
     this.isTagDialogOpen = false;

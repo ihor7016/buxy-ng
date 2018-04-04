@@ -11,6 +11,8 @@ export const buttonMoreModule = angular
   .component("buttonMore", {
     template,
     bindings: {
-      position: "@"
+      position: "@",
+      editItemClick: "&",
+      deleteItemClick: "&"
     }
   }).name;

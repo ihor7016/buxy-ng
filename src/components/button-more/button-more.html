@@ -1,6 +1,7 @@
 <md-menu md-offset="{{$ctrl.position ==='left' ? '-150 20':'40 20'}}">
-  <md-button aria-label="Open menu with custom trigger" class="button-more md-icon-button" aria-label="More" ng-click="$mdMenu.open()">
+  <md-button aria-label="Open menu with custom trigger" class="button-more md-icon-button"
+    aria-label="More" ng-click="$mdMenu.open()">
     <md-icon md-font-set="material-icons" class="button-more__more-icon ">more_vert</md-icon>
   </md-button>
-  <popup></popup>
+  <popup edit-item-click="$ctrl.editItemClick()" delete-item-click="$ctrl.deleteItemClick()"></popup>
 </md-menu>
