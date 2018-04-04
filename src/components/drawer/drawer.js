@@ -9,21 +9,6 @@ import { tagsModule } from "../tags/tags";
 export class DrawerController {
   constructor($mdSidenav) {
     this.$mdSidenav = $mdSidenav;
-    this.isOpened = false;
-  }
-  addAccountClick(event) {
-    console.log();
-  }
-  addTagClick(event) {
-    console.log();
-  }
-
-  $onChanges(changes) {
-    this.toggleLeft();
-  }
-
-  toggleLeft() {
-    this.isOpened = !this.isOpened;
   }
 }
 
