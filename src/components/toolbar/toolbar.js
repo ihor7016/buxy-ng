@@ -4,14 +4,21 @@ import ngAria from "angular-aria";
 import ngMaterial from "angular-material";
 import template from "./toolbar.html";
 
+import { aboutDialogModule } from "../about-dialog/about-dialog";
+
 class ToolbarController {
-  handleAboutClick() {
-    console.log("handleAboutClick");
+  handleAboutClick(event) {
+    this.isAboutDialogOpen = true;
+    this.aboutDialogOpenEvent = event;
+  }
+
+  handleAboutDialogClose() {
+    this.isAboutDialogOpen = false;
   }
 }
 
 export const toolbarModule = angular
-  .module("toolbar", [ngMaterial, ngAria, ngAnimate])
+  .module("toolbar", [ngMaterial, ngAria, ngAnimate, aboutDialogModule])
   .component("toolbar", {
     template,
     controller: ToolbarController,

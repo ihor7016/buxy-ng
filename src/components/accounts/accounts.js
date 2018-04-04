@@ -3,7 +3,9 @@ import ngAnimate from "angular-animate";
 import ngAria from "angular-aria";
 import ngMaterial from "angular-material";
 import template from "./accounts.html";
+
 import { buttonMoreModule } from "../button-more/button-more";
+import { accountDialogModule } from "../account-dialog/account-dialog";
 
 class AccountsController {
   constructor() {
@@ -32,13 +34,29 @@ class AccountsController {
     ];
   }
 
-  handleAddAccountClick() {
-    console.log("handleAddAccountClick");
+  handleAddAccountClick(event) {
+    this.isAccountDialogOpen = true;
+    this.accountDialogOpenEvent = event;
+  }
+
+  handleAccountDialogSubmit(data) {
+    console.log(data);
+    this.isAccountDialogOpen = false;
+  }
+
+  handleAccountDialogClose() {
+    this.isAccountDialogOpen = false;
   }
 }
 
 export const accountsModule = angular
-  .module("accounts", [ngMaterial, ngAria, ngAnimate, buttonMoreModule])
+  .module("accounts", [
+    ngMaterial,
+    ngAria,
+    ngAnimate,
+    buttonMoreModule,
+    accountDialogModule
+  ])
   .component("accounts", {
     template,
     controller: AccountsController

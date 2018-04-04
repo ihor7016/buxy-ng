@@ -1,0 +1,43 @@
+<md-dialog class="dialog">
+  <form ng-cloak>
+    <md-dialog-content class="md-dialog-content">
+      <h2>Add account</h2>
+      <div layout='row' layout-align="space-between center">
+        <md-input-container flex="45">
+          <label>Account</label>
+          <input ng-model="$ctrl.account" type="text">
+        </md-input-container>
+        <md-input-container flex="45">
+          <label>Balance</label>
+          <input ng-model="$ctrl.balance" type="text">
+        </md-input-container>
+      </div>
+      <div layout='row' layout-align="space-between center">
+        <md-input-container flex="45">
+          <label>Type</label>
+          <md-select ng-model="$ctrl.type">
+            <md-option ng-repeat="type in $ctrl.types" value="{{type}}">
+              {{type}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container flex="45">
+          <label>Currency</label>
+          <md-select ng-model="$ctrl.currency">
+            <md-option ng-repeat="currency in $ctrl.currencies" value="{{currency}}">
+              {{currency}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row" layout-align="end">
+      <md-button class="md-primary" ng-click="$ctrl.abort()">
+        Cancel
+      </md-button>
+      <md-button type="submit" class="md-primary" ng-click="$ctrl.submit()">
+        Ok
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
