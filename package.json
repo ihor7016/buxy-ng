@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production",
     "precommit": "lint-staged",
-    "firebase": "firebase"
+    "deploy": "firebase deploy"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
     "babel-plugin-angularjs-annotate": "^0.8.2",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.11",
-    "firebase": "^4.12.1",
     "firebase-tools": "^3.18.0",
     "husky": "^0.14.3",
     "js-beautify": "^1.7.5",
@@ -39,6 +38,7 @@
     "angular-aria": "^1.6.9",
     "angular-material": "^1.1.8",
     "angular-messages": "^1.6.9",
+    "firebase": "^4.12.1",
     "normalize.css": "^8.0.0"
   }
 }
