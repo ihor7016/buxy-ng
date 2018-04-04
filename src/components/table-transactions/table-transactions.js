@@ -8,8 +8,8 @@ export class GridController {
   constructor($scope) {
     this.scope = $scope;
     this.scope.gridOptions = {
-      enableHorizontalScrollbar: false,
-      enableVerticalScrollbar: false,
+      enableHorizontalScrollbar: 0,
+      enableVerticalScrollbar: 0,
       enableColumnResizing: true,
       enableSorting: true,
       columnDef: [
