@@ -8,7 +8,8 @@
       <md-icon md-font-set="material-icons">local_offer</md-icon>
       <p>
         {{item}}
-        <button-more class="drawer-menu__more-button"></button-more>
+        <button-more edit-item-click="$ctrl.handleClickEditTag()" delete-item-click="$ctrl.handleClickDeleteTag()"
+          class="drawer-menu__more-button"></button-more>
       </p>
     </md-list-item>
   </md-list>
