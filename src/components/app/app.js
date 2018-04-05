@@ -1,8 +1,6 @@
 import angular from "angular";
 import template from "./app.html";
 
-import "../../services/firebase-app";
-
 import { drawerModule } from "../drawer/drawer";
 import { toolbarModule } from "../toolbar/toolbar";
 import { transactionsModule } from "../transactions/transactions";

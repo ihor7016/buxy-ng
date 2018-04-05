@@ -6,7 +6,8 @@
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production",
     "precommit": "lint-staged",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "login": "firebase login"
   },
   "repository": {
     "type": "git",
