@@ -3,17 +3,16 @@
     <md-icon md-font-set="material-icons"> add </md-icon>
     <p> Add new account</p>
   </md-list-item>
-  <md-list class="accounts drawer-menu" ng-cloak>
-    <md-list class="accounts__menu drawer-menu" ng-cloak>
-      <md-list-item class="accounts__item drawer-menu__item" ng-repeat="item in $ctrl.accounts">
-        <md-icon md-font-set="material-icons"> account_balance </md-icon>
-        <p>
-          {{item.name}} {{item.balance}}{{item.currency}}
-          <button-more class="drawer-menu__more-button" edit-item-click="$ctrl.handleClickEditAccount()"
-            delete-item-click="$ctrl.handleClickDeleteAccount()"></button-more>
-        </p>
-      </md-list-item>
-    </md-list>
-    <account-dialog is-open="$ctrl.isAccountDialogOpen" open-event="$ctrl.accountDialogOpenEvent"
-      on-dialog-submit="$ctrl.handleAccountDialogSubmit(data)" on-dialog-close="$ctrl.handleAccountDialogClose()"></account-dialog>
+  <md-list class="accounts__menu drawer-menu" ng-cloak>
+    <md-list-item class="accounts__item drawer-menu__item" ng-repeat="item in $ctrl.accounts">
+      <md-icon md-font-set="material-icons"> account_balance </md-icon>
+      <p>
+        {{item.name}} {{item.balance}}{{item.currency}}
+        <button-more class="drawer-menu__more-button" edit-item-click="$ctrl.handleClickEditAccount()"
+          delete-item-click="$ctrl.handleClickDeleteAccount()"></button-more>
+      </p>
+    </md-list-item>
+  </md-list>
+  <account-dialog is-open="$ctrl.isAccountDialogOpen" open-event="$ctrl.accountDialogOpenEvent"
+    on-dialog-submit="$ctrl.handleAccountDialogSubmit(data)" on-dialog-close="$ctrl.handleAccountDialogClose()"></account-dialog>
 </div>
