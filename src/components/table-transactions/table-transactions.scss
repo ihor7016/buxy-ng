@@ -1,11 +1,32 @@
-.table-transactions-grid {
-  width: 100%;
-  height: 150px;
-  font-family: "Roboto", arial, sans-serif;
-  font-size: 13px;
-}
-
-.ui-grid,
-.ui-grid-viewport {
+.ui-grid {
   height: auto !important;
+  width: 100%;
+  font-family: "Roboto", arial, sans-serif;
+  line-height: 2.25;
+  border-bottom: 0px;
+
+  &-header {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  &-canvas {
+    font-size: 13px;
+    color: #757575;
+  }
+
+  &-header-cell {
+    padding-left: 15px;
+    border-right: 0px;
+    height: 40px;
+    background-color: #fff;
+  }
+
+  &-cell {
+    padding-left: 15px;
+    border-right: 0px;
+    border-bottom: 1px solid #ddd;
+    height: 40px !important;
+    background-color: #fff !important;
+  }
 }
